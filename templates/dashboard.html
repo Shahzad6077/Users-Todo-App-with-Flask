@@ -1,0 +1,195 @@
+{% extends 'base.html' %} {% block head %}
+<title>Add user</title>
+{% endblock %}
+
+<!-- #HERE we DEFINE OUR BODY -->
+{% block body %}
+
+<div
+  class="container my-6 py-8 flex flex-col-reverse lg:flex-row "
+  style="border:1px solid black"
+>
+  <!-- LIST OF USERS -->
+  <div
+    class="md:mr-6 w-full lg:w-4/12 shadow md:shadow-md my-6  px-2 py-2 flex flex-col items-center "
+  >
+    <h1
+      class="m-2 text-center text-uppercase text-xl font-mono text-indigo-600"
+    >
+      Users
+    </h1>
+    <table class="table overflow-y-scroll">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Role</th>
+          <th scope="col">Password</th>
+        </tr>
+      </thead>
+      <tbody class="bg-loca overflow-y-scroll">
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table> -->
+  </div>
+  <!-- ADD NEW USER -->
+  <div class="max-w-6xl w-3/5 m-auto  p-8 shadow md:shadow-md">
+    <h1 class="m-2 text-center text-4xl font-mono ">
+      Add New User
+    </h1>
+    <form action="/" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            placeholder="Enter Your Name"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Enter Email"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          name="phone"
+          id="phone"
+          placeholder="Enter Phone#"
+        />
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" name="role" class="form-control">
+          <option selected>Choose...</option>
+          <option value="teacher">Teacher</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div class="form-group flex justify-end ">
+        <button
+          type="submit"
+          class="btn btn-success px-10 bg-indigo-600 border-none"
+        >
+          Add
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- NOTIFICATIONS -->
+  <div
+    class="lg:ml-6 mb-8 lg:mb-0 px- py-2 flex flex-col shadow md:shadow-md notification"
+  >
+    <h1
+      class="m-2 text-center text-uppercase text-xl font-mono text-indigo-600"
+    >
+      Notification
+    </h1>
+    <div class="overflow-y-scroll" style="height: 23.7rem;">
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+      <div class="bg-indigo-100 mb-4 px-3 py-2">
+        <p class="truncate ...">
+          <strong class="mr-auto">Student abc enrolled in a new</strong>
+        </p>
+
+        <small class="text-muted">11 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
